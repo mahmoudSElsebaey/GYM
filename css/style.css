@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/*______ Main Variables ______ */
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --main-color: #f36100;
+  --p-color: #c4c4c4;
+
+  --nav-links-size: 15px;
+  --h1-size: 80px;
+  --h2-size: 32px;
+  --h3-size: 26px;
+  --h4-size: 22px;
+  --sec-title-size: 16px;
+
+  --weight-light: 300;
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+
+  --border-radius-small: 5px;
+  --border-radius-medium: 10px;
+  --border-radius-large: 50%;
+  --main-transition: all 0.3s ease-in-out;
+}
+body {
+  font-family: "Mulish", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: var(--weight-color);
+}
+ul {
+  list-style: none;
+}
+
+/*=========================================> Navbar  */
+
+.navbar-nav .nav-item .nav-link {
+  font-weight: var(--weight-bold);
+  font-size: var(--nav-links-size);
+  text-transform: uppercase;
+  color: var(--white-color);
+  position: relative;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.navbar-nav .nav-item .active {
+  color: var(--main-color) !important;
+}
+.navbar-nav .nav-item:hover .nav-link {
+  color: var(--main-color) !important;
+}
+.navbar .navbar-nav .nav-item .nav-link::after,
+.navbar .navbar-nav .nav-item .active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--main-color);
+  transform: scale(0%);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  -webkit-transform: scale(0%);
+  -moz-transform: scale(0%);
+  -ms-transform: scale(0%);
+  -o-transform: scale(0%);
+}
+.navbar .navbar-nav .nav-item .nav-link:hover::after,
+.navbar .navbar-nav .nav-item .active::after {
+  transform: scale(90%);
+  -webkit-transform: scale(90%);
+  -moz-transform: scale(90%);
+  -ms-transform: scale(90%);
+  -o-transform: scale(90%);
+  color: #1580bd;
+}
+
+/* _____Navbar Icons  */
+.nav-icons {
+  color: var(--white-color);
+  width: 200px;
+  line-height: 100%;
+  font-size: calc(var(--nav-links-size) - 1px);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.nav-icons span {
+  display: block;
+  margin: 0 10px;
+  color: rgba(255, 255, 255, 0.3);
+}
+.nav-icons .nav-socials {
+  margin-right: 10px;
+  width: 60%;
+  justify-content: space-between;
+}
+.nav-icons a:hover {
+  color: var(--main-color);
+}
+/* __________________offcanvas */
+.offcanvas-body .nav-link {
+  color: var(--black-color) !important;
+  position: relative;
+  width: fit-content;
+}
+.offcanvas-body .nav-socials a {
+  margin: 10px;
+}
+.offcanvas-body .nav-socials {
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.offcanvas-body .nav-socials a:hover {
+  color: var(--main-color);
+}
+.offcanvas-body .navbar-nav .nav-item {
+  cursor: pointer;
+}
+.offcanvas-body .navbar-nav .nav-item .nav-link::after,
+.offcanvas-body .navbar-nav .nav-item .active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background-color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.offcanvas-body .navbar-nav .nav-item:hover .nav-link::after,
+.offcanvas-body .navbar-nav .nav-item .active::after {
+  width: 100%;
+}
+
+/*=========================================>   */
+/*=========================================>   */
+/*=========================================>   */
+/*=========================================>   */
+/*=========================================>   */
+/*=========================================>   */

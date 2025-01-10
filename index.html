@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="This is a sample HTML template with CSS and Bootstrap."
+    />
+    <meta name="keywords" content="HTML, CSS, Bootstrap, Template" />
+    <meta name="author" content="Your Name" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gym | Template</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--------------------------- Navbar Section -------------->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img src="images/logo.png" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse">
+          <!-- ______Navbar nav items -->
+          <ul
+            class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center w-100"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">about us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">classes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">serveices</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">our team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">pages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">contact</a>
+            </li>
+          </ul>
+          <!-- ______Navbar Icons  -->
+          <div class="nav-icons d-flex">
+            <div class="search-icon">
+              <a href="#"><i class="fas fa-search"></i></a>
+            </div>
+            <span>|</span>
+            <div class="nav-socials d-flex">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- =======================> offcanvas -->
+    <div
+      class="offcanvas offcanvas-start"
+      style="width: 30%;"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <button
+          type="button"
+          class="btn-close text-reset"
+          style="display: block; margin-left: auto;"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <!-- ______offcanvas nav items -->
+        <ul
+          class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center w-100"
+        >
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">about us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">classes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">serveices</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">our team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">pages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">contact</a>
+          </li>
+        </ul>
+        <!-- <div id="myOverlay" class="overlay">
+          <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+          <div class="overlay-content">
+            <form action="#">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit" class="p-2"><i class="fas fa-search"></i></button>
+            </form>
+          </div>
+        </div>  -->
+        <hr />
+        <div class="nav-socials d-flex justify-content-center w-100">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!--------------------------- Home Page -------------->
+    <main class="main container-fluid"></main>
+
+    <!-- JS -->
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
