@@ -44,6 +44,7 @@
           <!-- ______Navbar nav items -->
           <ul
             class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center w-100"
+            id="nav"
           >
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -69,7 +70,7 @@
           </ul>
           <!-- ______Navbar Icons  -->
           <div class="nav-icons d-flex">
-            <div class="search-icon">
+            <div class="search-icon" onclick="showOverlay()">
               <a href="#"><i class="fas fa-search"></i></a>
             </div>
             <span>|</span>
@@ -83,11 +84,21 @@
         </div>
       </div>
     </nav>
+
+    <!-- =======================> Search Overlay -->
+    <div class="search-overlay" style="display: none">
+      <div class="search-overlay-content">
+        <div class="search-overlay-btnClose" onclick="showOverlay()">
+          <span>X</span>
+        </div>
+        <input type="text" placeholder="Searching here ..." />
+      </div>
+    </div>
     <!-- =======================> offcanvas -->
     <div
       class="offcanvas offcanvas-start"
-      style="width: 30%;"
-      tabindex="-1"
+      style="width: 300px"
+      tabindex
       id="offcanvasExample"
       aria-labelledby="offcanvasExampleLabel"
     >
@@ -95,24 +106,28 @@
         <button
           type="button"
           class="btn-close text-reset"
-          style="display: block; margin-left: auto;"
+          style="display: block; margin-left: auto"
           data-bs-dismiss="offcanvas"
           aria-label="Close"
         ></button>
+      </div>
+      <div class="search-icon">
+        <a href="#"><i class="fas fa-search" onclick="showOverlay()"></i></a>
       </div>
       <div class="offcanvas-body">
         <!-- ______offcanvas nav items -->
         <ul
           class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center w-100"
+           id="offcanvasNav"
         >
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">about us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#">classes</a>
+            <a class="nav-link" href="#">classes</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">serveices</a>
@@ -127,15 +142,6 @@
             <a class="nav-link" href="#">contact</a>
           </li>
         </ul>
-        <!-- <div id="myOverlay" class="overlay">
-          <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
-          <div class="overlay-content">
-            <form action="#">
-              <input type="text" placeholder="Search.." name="search">
-              <button type="submit" class="p-2"><i class="fas fa-search"></i></button>
-            </form>
-          </div>
-        </div>  -->
         <hr />
         <div class="nav-socials d-flex justify-content-center w-100">
           <a href="#"><i class="fab fa-facebook-f"></i></a>

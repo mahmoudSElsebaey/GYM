@@ -9,23 +9,20 @@
   --black-color: #000;
   --main-color: #f36100;
   --p-color: #c4c4c4;
-
   --nav-links-size: 15px;
   --h1-size: 80px;
   --h2-size: 32px;
   --h3-size: 26px;
   --h4-size: 22px;
   --sec-title-size: 16px;
-
   --weight-light: 300;
   --weight-normal: 400;
   --weight-medium: 500;
   --weight-bold: 700;
-
   --border-radius-small: 5px;
   --border-radius-medium: 10px;
   --border-radius-large: 50%;
-  --main-transition: all 0.3s ease-in-out;
+  --main-transition: all 0.3s linear;
 }
 body {
   font-family: "Mulish", sans-serif;
@@ -37,9 +34,7 @@ a {
 ul {
   list-style: none;
 }
-
 /*=========================================> Navbar  */
-
 .navbar-nav .nav-item .nav-link {
   font-weight: var(--weight-bold);
   font-size: var(--nav-links-size);
@@ -87,8 +82,7 @@ ul {
   -o-transform: scale(90%);
   color: #1580bd;
 }
-
-/* _____Navbar Icons  */
+/* __________________ Navbar Icons __________________*/
 .nav-icons {
   color: var(--white-color);
   width: 200px;
@@ -113,7 +107,89 @@ ul {
 .nav-icons a:hover {
   color: var(--main-color);
 }
-/* __________________offcanvas */
+/* __________________ Search Overlay __________________*/
+.search-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 1100;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: none;
+}
+.search-overlay-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.search-overlay-content input {
+  font-size: 35px;
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+  outline: none;
+  caret-color: var(--white-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.506);
+  color: #ffffffcf;
+}
+.search-overlay-content input::placeholder {
+  color: rgba(255, 255, 255, 0.506);
+}
+.search-overlay-btnClose {
+  background-color: #4a4444;
+  color: rgba(255, 255, 255, 0.506);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  border-radius: var(--border-radius-large);
+  cursor: pointer;
+  position: absolute;
+  right: 50%;
+  bottom: 150px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.search-overlay-btnClose:hover {
+  background-color: #6c6565;
+  color: #ffffffcf;
+}
+@media (max-width: 768px) {
+  .search-overlay-content {
+    width: 90%;
+    padding: 20px;
+  }
+  .search-overlay-content input {
+    font-size: 25px;
+    width: 90%;
+  }
+}
+
+.abc{
+  background-color: green;
+}
+
+
+/* __________________ offcanvas __________________*/
+.offcanvas .search-icon {
+   
+  text-align: center;
+}
+.offcanvas .search-icon a:hover{
+  color: var(--main-color);
+ 
+}
 .offcanvas-body .nav-link {
   color: var(--black-color) !important;
   position: relative;
