@@ -23,137 +23,193 @@
   </head>
 
   <body>
-    <!--------------------------- Navbar Section -------------->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"
-          ><img src="images/logo.png" alt=""
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasExample"
-          aria-controls="offcanvasExample"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse">
-          <!-- ______Navbar nav items -->
-          <ul
-            class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center w-100"
-            id="nav"
+    <header>
+      <!---------------------------------<  Navbar Section  >-------------->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img src="images/logo.png" alt=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample"
+            aria-controls="offcanvasExample"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">about us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">classes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">serveices</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">our team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">pages</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">contact</a>
-            </li>
-          </ul>
-          <!-- ______Navbar Icons  -->
-          <div class="nav-icons d-flex">
-            <div class="search-icon" onclick="showOverlay()">
-              <a href="#"><i class="fas fa-search"></i></a>
-            </div>
-            <span>|</span>
-            <div class="nav-socials d-flex">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse">
+            <!-- ______Navbar nav items -->
+            <ul
+              class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center w-100"
+              id="nav"
+            >
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#aboutUs">about us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#classes">classes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#serveices">serveices</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#ourTeam">our team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pages">pages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">contact</a>
+              </li>
+            </ul>
+            <!-- ______Navbar Icons  -->
+            <div class="nav-icons d-flex">
+              <div class="search-icon" onclick="showOverlay()">
+                <a href="#"><i class="fas fa-search"></i></a>
+              </div>
+              <span>|</span>
+              <div class="nav-socials d-flex">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </nav>
-
-    <!-- =======================> Search Overlay -->
-    <div class="search-overlay" style="display: none">
-      <div class="search-overlay-content">
-        <div class="search-overlay-btnClose" onclick="showOverlay()">
-          <span>X</span>
+      </nav>
+      <!--   ==========> Search Overlay -->
+      <div class="search-overlay" style="display: none">
+        <div class="search-overlay-content">
+          <div class="search-overlay-btnClose" onclick="showOverlay()">
+            <span>X</span>
+          </div>
+          <input type="text" placeholder="Searching here ..." />
         </div>
-        <input type="text" placeholder="Searching here ..." />
       </div>
-    </div>
-    <!-- =======================> offcanvas -->
-    <div
-      class="offcanvas offcanvas-start"
-      style="width: 300px"
-      tabindex
-      id="offcanvasExample"
-      aria-labelledby="offcanvasExampleLabel"
-    >
-      <div class="offcanvas-header">
+      <!--   ==========> offcanvas -->
+      <div
+        class="offcanvas offcanvas-start"
+        style="width: 300px"
+        tabindex
+        id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel"
+      >
+        <div class="offcanvas-header">
+          <button
+            type="button"
+            class="btn-close text-reset"
+            style="display: block; margin-left: auto"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="search-icon">
+          <a href="#"><i class="fas fa-search" onclick="showOverlay()"></i></a>
+        </div>
+        <div class="offcanvas-body">
+          <!-- ______offcanvas nav items -->
+          <ul
+            class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center w-100"
+            id="navX"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#aboutUs">about us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#classes">classes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#serveices">serveices</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ourTeam">our team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pages">pages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">contact</a>
+            </li>
+          </ul>
+          <hr />
+          <!-- ______offcanvas social icons_____ -->
+          <div class="nav-socials d-flex justify-content-center w-100">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!------------------------------------<  Home Page  >-------------------->
+    <main>
+      <div
+        id="carouselExampleInterval"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="300000000">
+            <img
+              src="images/hero-1.jpg"
+              class="d-block w-100"
+              alt="hero-image"
+            />
+            <div class="carousel-caption d-md-block">
+              <span>Shape your body</span>
+              <h1>be <strong>strong</strong> traning hard</h1>
+              <a href="#">get info</a>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img
+              src="images/hero-2.jpg"
+              class="d-block w-100"
+              alt="hero-image"
+            />
+            <div class="carousel-caption cc2 d-md-block">
+              <span>Shape your body</span>
+              <h1>be <strong>strong</strong> traning hard</h1>
+              <a href="#">get info</a>
+            </div>
+          </div>
+        </div>
         <button
+          class="carousel-control-prev"
           type="button"
-          class="btn-close text-reset"
-          style="display: block; margin-left: auto"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="search-icon">
-        <a href="#"><i class="fas fa-search" onclick="showOverlay()"></i></a>
-      </div>
-      <div class="offcanvas-body">
-        <!-- ______offcanvas nav items -->
-        <ul
-          class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center w-100"
-           id="offcanvasNav"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="prev"
         >
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">about us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">classes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">serveices</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">our team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">pages</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">contact</a>
-          </li>
-        </ul>
-        <hr />
-        <div class="nav-socials d-flex justify-content-center w-100">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-    </div>
-
-    <!--------------------------- Home Page -------------->
-    <main class="main container-fluid"></main>
+    </main>
 
     <!-- JS -->
     <script src="js/all.min.js"></script>
