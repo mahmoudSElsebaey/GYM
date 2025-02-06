@@ -234,10 +234,10 @@ ul {
 }
 /*=========================================> Home Page ==> Main Section  */
 main .carousel {
-  position: absolute;
-  top: 0;
+  /* position: relative; */
+  margin-top: -110px;
   right: 0;
-  height: 100vh !important;
+  height: 100% !important;
 }
 main .carousel-inner img {
   width: 130% !important;
@@ -287,6 +287,10 @@ main .carousel-caption a {
   animation: move-text-to-top 0.8s 1 0.7s ease forwards;
   -webkit-animation: move-text-to-top 0.8s 1 0.7s ease forwards;
 }
+/* .carousel-control-next-icon,
+.carousel-control-prev-icon {
+  margin-top: 25vh;
+} */
 @keyframes move-text-to-top {
   0% {
     margin-top: 180px;
@@ -319,7 +323,67 @@ main .carousel-caption a {
     font-size: 40px;
   }
 }
-/*=========================================>   */
+/*=========================================> Why choose us Section   */
+.choose-us-sec {
+  background-color: #0a0a0a;
+  padding: 100px 0;
+}
+.section-title {
+  text-align: center;
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+}
+.section-title span {
+  color: var(--main-color);
+  font-size: var(--sec-title-size);
+}
+.section-title h2 {
+  color: var(--white-color);
+  font-family: "Oswald", sans-serif;
+  margin-top: 5px;
+}
+.choose-us-sec .gym-features {
+ 
+  font-family: "Oswald", sans-serif;
+}
+.choose-us-sec .gym-features .item {
+  text-align: center;
+  margin-top: 40px;
+}
+.choose-us-sec .gym-features .item .icon {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  margin: 10px auto 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--main-color);
+  font-size: 38px;
+  transition: var(--main-transition) !important;
+}
+.choose-us-sec .gym-features .item:nth-child(2) .icon {
+  line-height: 75px;
+}
+.choose-us-sec .gym-features .item:nth-child(3) .icon {
+  transform: rotate(45deg);
+}
+.choose-us-sec .gym-features .item h4 {
+  font-size: var(--h4-size);
+  font-weight: var(--weight-normal);
+  color: var(--white-color);
+}
+.choose-us-sec .gym-features .item p {
+  color: #a9a9a9;
+  font-size: 14px;
+  width: 96%;
+  margin: auto;
+}
+.choose-us-sec .gym-features .item:hover .icon {
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+
+
 /*=========================================>   */
 /*=========================================>   */
 /*=========================================>   */
