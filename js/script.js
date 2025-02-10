@@ -1,14 +1,15 @@
 //  ______________ Navbar Nav Links________________
- 
 let allItemsLinks = document.querySelectorAll(`#nav .nav-item a`);
-for (let i = 0; i < allItemsLinks.length; i++) {
-  allItemsLinks[i].addEventListener("click", function () {
-    let current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
 
+allItemsLinks.forEach(
+  (e) =>
+    (e.onclick = function () {
+      // remove active from all links
+      allItemsLinks.forEach((e) => e.classList.remove("active"));
+      // add active class to target element
+      this.classList.add("active");
+    })
+);
 
 //  ______________ Search Overlay ________________
 let searchOverlay = document.querySelector(".search-overlay"),
