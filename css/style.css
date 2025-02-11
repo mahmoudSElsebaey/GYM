@@ -457,7 +457,7 @@ main .carousel-caption a {
 }
 /*=========================================> Banner section*/
 .banner-sec {
-  background-image: url("/images/banner2-bg.jpg");
+  background-image: url("../images/banner2-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
