@@ -455,6 +455,54 @@ main .carousel-caption a {
   -moz-transform: rotate(-6deg);
   -o-transform: rotate(-6deg);
 }
+/*=========================================> Banner section*/
+.banner-sec {
+  background-image: url("/images/banner2-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height:500px;
+  font-family: "Oswald", sans-serif;
+  position: relative;
+  margin-bottom: 232px;
+}
+.banner-content {
+  width: 90%;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.banner-content h2 {
+  font-size: 48px;
+  color: var(--white-color);
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.banner-content p {
+  font-size: 20px;
+  color: var(--p-color);
+  font-weight: 700;
+  margin-bottom: 45px;
+  font-family: "Muli", sans-serif;
+}
+.banner-content button {
+  color: var(--white-color);
+  font-family: "Muli", sans-serif;
+  border: 2px solid var(--main-color);
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 17px 30px 16px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.banner-content button:hover {
+  color: var(--white-color);
+  background-color: var(--main-color);
+}
 
 /*=========================================>   */
 /*=========================================>   */
