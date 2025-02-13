@@ -34,6 +34,20 @@ a {
 ul {
   list-style: none;
 }
+/*=========================================> Pre loader icon */
+.pre-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  background-color: #000;
+  background-image: url("../images/pre-loading.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  /* transform: scale(1.5); */
+}
 /*=========================================> Header Section  */
 .navbar {
   padding-top: 50px;
@@ -462,7 +476,7 @@ main .carousel-caption a {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height:500px;
+  height: 500px;
   font-family: "Oswald", sans-serif;
   position: relative;
   margin-bottom: 232px;
