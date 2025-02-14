@@ -1,3 +1,8 @@
+//  ______________ Pre loading Icon Animation________________
+let preLoader = document.querySelector(".pre-loading");
+window.addEventListener("load", function () {
+  preLoader.style.display = "none";
+});
 //  ______________ Navbar Nav Links________________
 let allItemsLinks = document.querySelectorAll(`#nav .nav-item a`);
 
@@ -10,7 +15,6 @@ allItemsLinks.forEach(
       this.classList.add("active");
     })
 );
-
 //  ______________ Search Overlay ________________
 let searchOverlay = document.querySelector(".search-overlay"),
   searchBtnClose = document.querySelector(".search-overlay-btnClose");
