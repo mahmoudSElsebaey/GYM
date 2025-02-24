@@ -29,7 +29,7 @@
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"
-            ><img src="images/logo.png" alt=""
+            ><img src="images/logo.png" alt="logo-image"
           /></a>
           <button
             class="navbar-toggler"
@@ -409,7 +409,83 @@
       </div>
     </section>
 
-    <!------------------------------------<  Section >-------------------->
+    <!------------------------------------< Gallery Section >-------------------->
+    <section>
+      <div class="gallery-sec">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-12 col-sm-11">
+            <div class="gallery-item gi-1">
+              <img
+                src="images/banner2-bg.jpg"
+                width="100%"
+                height="100%"
+                onclick="showPopup(this)"
+                alt="gallery-image"
+              />
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-11">
+            <div class="gallery-item gi-2">
+              <img
+                src="images/gallery-4.jpg"
+                width="100%"
+                height="100%"
+                onclick="showPopup(this)"
+                alt="gallery-image"
+              />
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-11">
+            <div class="gallery-item gi-3">
+              <img
+                src="images/class-3.jpg"
+                width="100%"
+                height="100%"
+                onclick="showPopup(this)"
+                alt="gallery-image"
+              />
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-11">
+            <div class="gallery-item gi-4">
+              <img
+                src="images/gallery1111.jpeg"
+                width="100%"
+                height="100%"
+                onclick="showPopup(this)"
+                alt="gallery-image"
+              />
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-11">
+            <div class="gallery-item gi-5">
+              <img
+                src="images/team-4.jpg"
+                width="100%"
+                height="100%"
+                onclick="showPopup(this)"
+                alt="gallery-image"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-11">
+            <div class="gallery-item gi-6">
+              <img
+                src="images/gallery-6.jpg"
+                width="100%"
+                height="100%"
+                onclick="showPopup(this)"
+                alt="gallery-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="popup">
+        <span onclick="closePopup()">&times;</span>
+        <img id="popup-img" />
+      </div>
+    </section>
     <!------------------------------------<  Section >-------------------->
     <!------------------------------------<  Section >-------------------->
 
@@ -417,5 +493,14 @@
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      function showPopup(img) {
+        document.getElementById("popup-img").src = img.src;
+        document.getElementById("popup").style.display = "flex";
+      }
+      function closePopup() {
+        document.getElementById("popup").style.display = "none";
+      }
+    </script>
   </body>
 </html>
