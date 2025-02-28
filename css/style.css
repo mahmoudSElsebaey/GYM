@@ -602,48 +602,32 @@ main .carousel-caption a {
   background-color: #151515;
   overflow: hidden;
 }
-.gallery-item {
-  /* width: 105%; */
+.gallery-row {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.gallery-column {
+  max-width: 100%;
+  padding: 4px;
   height: 400px;
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 5px 0;
+}
+.gallery-column:nth-child(1),
+.gallery-column:nth-last-child(1) {
+  grid-column: span 2;
+}
+.gallery-column img {
+  width: 100%;
+  height: 100%;
   cursor: zoom-in;
-  position: relative;
-}
-.gallery-item.gi-2 {
-  width: 110%;
-  margin-left: -5%;
-}
-.gallery-item.gi-4 {
-  width: 105%;
-  /* margin-left: 2.5%; */
-}
-.gallery-item.gi-6 {
-  margin-left: -2.5%;
 }
 @media (max-width: 990px) {
-  .gallery-item.gi-2 {
-    width: 105%;
-    margin-left: -2.5%;
-  }
-  .gallery-item.gi-4 {
-    width: 105%;
-    margin-left: -2.5%;
-  }
-  .gallery-item.gi-6 {
-    margin-left: 0%;
+  .gallery-row {
+    grid-template-columns: 50% 50%;
   }
 }
 @media (max-width: 767px) {
-  .gallery-item.gi-2 {
-    width: 100%;
-    margin-left: 0%;
-  }
-  .gallery-item.gi-4 {
-    width: 100%;
-    margin-left: 0%;
+  .gallery-row {
+    grid-template-columns: 100%;
   }
 }
 /* =======> Gallery Zoom */
@@ -657,14 +641,13 @@ main .carousel-caption a {
   background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
+  z-index: 9999;
 }
 .popup img {
-  /* width: 100%; */
   height: 80%;
   min-width: 50%;
   max-width: 90%;
   max-height: 90%;
-  border-radius: 8px;
 }
 .popup span {
   position: absolute;
@@ -674,7 +657,106 @@ main .carousel-caption a {
   color: white;
   cursor: pointer;
 }
-
+/*=========================================> Our Team Section  */
+.our-team {
+  background-color: #151515;
+  padding:50px 0;
+}
+.our-team .section-title {
+  text-align: left;
+}
+.our-team-btn {
+  margin-top: -30px;
+  background-color: transparent;
+  color: var(--white-color);
+  font-family: "Muli", sans-serif;
+  border: 2px solid var(--main-color);
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 17px 20px 16px;
+  letter-spacing: 1px;
+  font-weight: var(--weight-bold);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.our-team-btn:hover {
+  background-color: var(--main-color);
+}
+.our-team .slide-container {
+  /* border: 1px solid green; */
+  margin-top: 30px;
+}
+.our-team .slides {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 70p 50px;
+}
+.our-team .slide-item {
+  width: 350px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.our-team .slide-item img {
+  width: 100%;
+  height: 100%;
+}
+.our-team .slide-item-info {
+  background-color: black;
+  text-align: center;
+  position: absolute;
+  padding-top: 30px;
+  bottom: -42%;
+  width: 100%;
+  height: 150px;
+  transform: skewY(-5deg);
+  -webkit-transform: skewY(-5deg);
+  -moz-transform: skewY(-5deg);
+  -ms-transform: skewY(-5deg);
+  -o-transform: skewY(-5deg);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.our-team .slide-item:hover .slide-item-info {
+  bottom: -10%;
+}
+.our-team .slide-item-info::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #464646;
+}
+.our-team .slide-item-info h4 {
+  transform: skewY(5deg);
+  color: var(--white-color);
+  font-weight: var(--weight-bold);
+  font-size: var(--h4-size);
+}
+.our-team .slide-item-info p {
+  transform: skewY(5deg);
+  color: var(--p-color);
+}
+.swiper {
+  height: 470px;
+}
+.our-team .slides .swiper-pagination-bullet {
+  background-color: var(--main-color);
+  height: 11px;
+  width: 11px;
+}
 /*=========================================>   */
 /*=========================================>   */
 /*=========================================>   */

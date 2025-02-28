@@ -24,32 +24,54 @@ function showOverlay() {
     ? (searchOverlay.style.display = "block")
     : (searchOverlay.style.display = "none");
 }
+//  ______________ Gallery Zoom Images  ______________ 
+function showPopup(img) {
+  document.getElementById("popup-img").src = img.src;
+  document.getElementById("popup").style.display = "flex";
+}
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+document.getElementById("popup").addEventListener("click", function (e) {
+  if (e.target === this) {
+    closePopup();
+  }
+});
+//   ______________ Add Swiper in Our Team section  ______________ 
+const swiper = new Swiper(".slides", {
+  loop: true,
+  speed: 1000,
+  grabCursor: true,
+  spaceBetween: 25,
+  // freeMode: true,
 
-// class Car {
-//   constructor(name, model) {
-//     this.n = name;
-//     this.m = model;
-//   }
-//   info() {
-//     return `The Car ${this.n} that model is ${this.m}`;
-//   }
-// }
+  autoplay: {
+    delay: 4000,
+  },
+  sticky: true,
+  
+  // pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
 
-// class Motor extends Car {
-//   #s;
-//   constructor(name, model, speed) {
-//     super(name, model);
-//     this.#s = speed;
-//   }
-//   info() {
-//     return `The Car ${this.n} that model is ${this.m} and speed ${this.s} km/h`;
-//   }
-// }
-
-// let car1 = new Car("BMW", 2019);
-// console.log(car1.info());
-
-// let motor1 = new Motor("Hommer", 2016 , 15);
-// console.log(motor1.info());
-
-// console.log(car1.__proto__ === Car.prototype);
+  // Navigation arrows
+  // navigation: {
+  //   nextEl: ".swiper-button-next",
+  //   prevEl: ".swiper-button-prev",
+  // },
+  // Responsive breakpoints
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    767: {
+      slidesPerView: 2,
+    },
+    990: {
+      slidesPerView: 3,
+    },
+  },
+});

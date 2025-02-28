@@ -20,6 +20,11 @@
       href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
+    <!-- Link of Swiper Css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <!-- Pre loading Icon Animation -->
@@ -257,7 +262,6 @@
         </div>
       </div>
     </section>
-
     <!------------------------------------< Our Classes Section >-------------------->
     <section class="our-classes">
       <div class="section-title">
@@ -408,11 +412,54 @@
         </div>
       </div>
     </section>
-
     <!------------------------------------< Gallery Section >-------------------->
     <section>
       <div class="gallery-sec">
-        <div class="row justify-content-center">
+        <div class="gallery-row">
+          <div class="gallery-column">
+            <img
+              src="images/banner2-bg.jpg"
+              onclick="showPopup(this)"
+              alt="gallery-image"
+            />
+          </div>
+          <div class="gallery-column">
+            <img
+              src="images/gallery-4.jpg"
+              onclick="showPopup(this)"
+              alt="gallery-image"
+            />
+          </div>
+          <div class="gallery-column">
+            <img
+              src="images/class-3.jpg"
+              onclick="showPopup(this)"
+              alt="gallery-image"
+            />
+          </div>
+          <div class="gallery-column">
+            <img
+              src="images/gallery1111.jpeg"
+              onclick="showPopup(this)"
+              alt="gallery-image"
+            />
+          </div>
+          <div class="gallery-column">
+            <img
+              src="images/team-4.jpg"
+              onclick="showPopup(this)"
+              alt="gallery-image"
+            />
+          </div>
+          <div class="gallery-column">
+            <img
+              src="images/gallery-6.jpg"
+              onclick="showPopup(this)"
+              alt="gallery-image"
+            />
+          </div>
+        </div>
+        <!-- <div class="row justify-content-center">
           <div class="col-lg-6 col-md-12 col-sm-11">
             <div class="gallery-item gi-1">
               <img
@@ -479,28 +526,100 @@
               />
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="popup" id="popup">
         <span onclick="closePopup()">&times;</span>
         <img id="popup-img" />
       </div>
     </section>
-    <!------------------------------------<  Section >-------------------->
-    <!------------------------------------<  Section >-------------------->
+    <!------------------------------------<  Section Our Team>-------------------->
+    <section>
+      <div class="our-team">
+        <div class="container">
+          <div class="section-title">
+            <span>Our Team</span>
+            <div class="d-flex justify-content-between align-items-center">
+              <h2>TRAIN WITH EXPERTS</h2>
+              <button class="our-team-btn">appointment</button>
+            </div>
+          </div>
+          <div class="slide-container swiper">
+            <div class="slides">
+              <div class="swiper-wrapper">
+                <div class="slide-item swiper-slide">
+                  <img src="images/team-1.jpg" alt="Team Image" />
+                  <div class="slide-item-info">
+                    <h4>Athart Rachel</h4>
+                    <p>Gym Trainer</p>
+                  </div>
+                </div>
+                <div class="slide-item swiper-slide">
+                  <img src="images/team-2.jpg" alt="Team Image" />
+                  <div class="slide-item-info">
+                    <h4>Athart Rachel</h4>
+                    <p>Gym Trainer</p>
+                  </div>
+                </div>
+                <div class="slide-item swiper-slide">
+                  <img src="images/team-3.jpg" alt="Team Image" />
+                  <div class="slide-item-info">
+                    <h4>Athart Rachel</h4>
+                    <p>Gym Trainer</p>
+                  </div>
+                </div>
+                <div class="slide-item swiper-slide">
+                  <img src="images/team-4.jpg" alt="Team Image" />
+                  <div class="slide-item-info">
+                    <h4>Athart Rachel</h4>
+                    <p>Gym Trainer</p>
+                  </div>
+                </div>
+                <div class="slide-item swiper-slide">
+                  <img src="images/team-5.jpg" alt="Team Image" />
+                  <div class="slide-item-info">
+                    <h4>Athart Rachel</h4>
+                    <p>Gym Trainer</p>
+                  </div>
+                </div>
+                <div class="slide-item swiper-slide">
+                  <img src="images/team-6.jpg" alt="Team Image" />
+                  <div class="slide-item-info">
+                    <h4>Athart Rachel</h4>
+                    <p>Gym Trainer</p>
+                  </div>
+                </div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
 
-    <!-- JS -->
+              <!-- If we need navigation buttons -->
+              <!-- <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div> -->
+            </div>
+            <!-- <div class="slide-btns">
+              <span class="active"></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="control-btns">
+              <button class="next">next</button>
+              <button class="prev">prev</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------------------------------------<  Section >-------------------->
+    <!------------------------------------<  Section >-------------------->
+    <!-- ____________ JS Links ____________  -->
+    <!-- Link Font Awesome icons Script -->
     <script src="js/all.min.js"></script>
+    <!-- Link Bootstrap5 Script -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Link SwiperJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Link Custom Script -->
     <script src="js/script.js"></script>
-    <script>
-      function showPopup(img) {
-        document.getElementById("popup-img").src = img.src;
-        document.getElementById("popup").style.display = "flex";
-      }
-      function closePopup() {
-        document.getElementById("popup").style.display = "none";
-      }
-    </script>
   </body>
 </html>
